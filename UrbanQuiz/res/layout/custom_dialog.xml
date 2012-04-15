@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/layout_root"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:padding="10dp"
+              >
+    <TextView android:id="@+id/youGotIt"
+              android:layout_width="wrap_content"
+              android:layout_height="fill_parent"
+              android:textColor="#FFF"
+              android:drawablePadding="10dip"
+              android:layout_gravity="center"
+              android:singleLine="true" 
+              android:paddingBottom="5dip"             
+              />
+    <TextView android:id="@+id/correctAnswer"
+              android:layout_width="wrap_content"
+              android:layout_height="fill_parent"
+              android:textColor="#FFF"
+              android:paddingBottom="5dip"
+              />
+    <TextView android:id="@+id/wordInUse"
+              android:layout_width="wrap_content"
+              android:layout_height="fill_parent"
+              android:textColor="#FFF"
+              android:paddingBottom="5dip"
+              />
+    <TextView android:id="@+id/author"
+              android:layout_width="wrap_content"
+              android:layout_height="fill_parent"
+              android:textColor="#FFF"
+              android:paddingBottom="5dip"
+              />
+    <TextView android:id="@+id/source"
+              android:layout_width="wrap_content"
+              android:layout_height="fill_parent"
+              android:textColor="#FFF"
+              />
+</LinearLayout>

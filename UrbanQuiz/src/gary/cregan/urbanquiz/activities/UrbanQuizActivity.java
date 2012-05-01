@@ -306,7 +306,18 @@ public class UrbanQuizActivity extends Activity
 			System.out.println("ERROR: 0 Wrong Answers");
 		}
 		
+		convertToLowerCase(answersToBeReturned);
 		return answersToBeReturned;
+	}
+	
+	public void convertToLowerCase(List<String> listOfStrings)
+	{
+		ListIterator<String> iterator = listOfStrings.listIterator();
+	    while (iterator.hasNext())
+	    {
+	        iterator.set(iterator.next().toLowerCase());
+	    }
+
 	}
 	
 	public void setAllButtons()
@@ -385,7 +396,7 @@ public class UrbanQuizActivity extends Activity
 			while(response == null || response.getResult_type().equals("no_results"))
 			{
 				Random randomGenerator = new Random();
-				int randomInt = randomGenerator.nextInt(80367);
+				int randomInt = randomGenerator.nextInt(40184);
 				source = retrieveStream(params[0] + myDbHelper.getWord(randomInt));
 				Gson gson = new Gson();
 				reader = new InputStreamReader(source);

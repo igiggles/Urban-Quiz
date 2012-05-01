@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="hello">Hello World, UrbanQuizActivity!</string>
-    <string name="app_name">UrbanQuiz</string>
+    <string name="hello">Welcome to Urban Quiz!</string>
+    <string name="app_name">Urban Quiz</string>
     <string name="answerA">A?</string>
     <string name="answerB">B?</string>
     <string name="answerC">C?</string>
     <string name="answerD">D?</string>
     <string name="answerImage">Answer</string>
     <string name="startQuiz">Start Quiz</string>
-    <string name="credits">Credits</string>
+    <string name="credits">About</string>
     
 
 </resources>

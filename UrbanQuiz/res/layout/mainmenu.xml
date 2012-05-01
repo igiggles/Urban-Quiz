@@ -10,6 +10,13 @@
         android:layout_height="wrap_content"
         android:layout_weight="3.63"
         android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.36"
+            android:src="@drawable/wip" />
     </LinearLayout>
 
     <Button
@@ -19,7 +26,7 @@
         android:text="@+string/startQuiz" />
 
     <Button
-        android:id="@+id/adminModeButton"
+        android:id="@+id/creditsButton"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@+string/credits" />

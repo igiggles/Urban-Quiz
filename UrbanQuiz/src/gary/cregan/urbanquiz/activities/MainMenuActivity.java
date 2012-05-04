@@ -5,6 +5,8 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.view.Gravity;
@@ -56,7 +58,7 @@ public class MainMenuActivity extends Activity
         this.storyButton.setOnClickListener(new OnClickListener() {
           public void onClick(View v) 
           {
-        	  if(Settings.Secure.getInt(getContentResolver(), "mobile_data", 1) == 1)
+        	  if(isOnline())
         	  {
         		  Intent myIntent = new Intent(v.getContext(), UrbanQuizActivity.class);
         		  startActivityForResult(myIntent, 0);        		  
@@ -76,4 +78,16 @@ public class MainMenuActivity extends Activity
             }
          });
     }
+	
+	public boolean isOnline() 
+	{
+		ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+		NetworkInfo netInfo = cm.getActiveNetworkInfo();
+		if (netInfo != null && netInfo.isConnectedOrConnecting()) 
+		{
+			return true;
+		}
+		
+		return false;
+	}
 }

@@ -383,10 +383,6 @@ public class UrbanQuizActivity extends Activity
 	    	{
 	    		addQuestion();
 	    	}
-	    	
-	    	//setAllButtons();
-	    	//wrongAnswers.clear();
-	    	//hideLoadingDialog();
 	    }
 
 		@Override

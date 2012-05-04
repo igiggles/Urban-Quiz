@@ -39,6 +39,7 @@ public class UrbanQuizActivity extends Activity
 	public InputStream source;
 	public Reader reader;
 	public int correctCount = 0;
+	public int questionTotal = 0;
 	public ProgressDialog progressDialog;
 	public AlertDialog alert;
 	public Button button1;
@@ -133,7 +134,7 @@ public class UrbanQuizActivity extends Activity
 	    });
 	    
 	    this.totalSoFar = (TextView)this.findViewById(R.id.totalSoFar);
-	    this.totalSoFar.setText("Score : 0");
+	    this.totalSoFar.setText("Score :");
 	
 	    this.listOfAnswers = new ArrayList<Question>();
 	    
@@ -198,12 +199,11 @@ public class UrbanQuizActivity extends Activity
     	}
     	else
     	{
-    		correctCount = 0;
     		this.showAnsweredQuestionDialog("Incorrect");
     	}
-    	
+    	questionTotal++;
     	this.addQuestion();
-    	this.totalSoFar.setText("Score: " + correctCount);
+    	this.totalSoFar.setText("Score: " + correctCount + "/" + questionTotal);
 	}
 	private void addQuestion()
 	{

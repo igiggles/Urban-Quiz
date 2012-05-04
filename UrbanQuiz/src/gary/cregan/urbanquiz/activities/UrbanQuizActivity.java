@@ -353,8 +353,9 @@ public class UrbanQuizActivity extends Activity
 			}
 		}
 		
-	    protected void onPostExecute(List<Result> result) 
+		protected void onPostExecute(List<Result> result) 
 	    {
+			Collections.sort(result);
 	    	Question question = new Question();
 	    	question.setDescription(result.get(0).getDefinition());
 	    	question.setRightAnswer(result.get(0).getWord().toLowerCase().trim());

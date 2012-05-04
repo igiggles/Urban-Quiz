@@ -1,7 +1,7 @@
 package gary.cregan.urbanquiz.domain;
 
 import com.google.gson.annotations.*;
-public class Result 
+public class Result implements Comparable<Result>
 { 
 	@SerializedName("defid") 
 	public String defid; 
@@ -16,9 +16,9 @@ public class Result
 	@SerializedName("example") 
 	public String example; 
 	@SerializedName("thumbs_up") 
-	public String thumbs_up; 
+	public int thumbs_up; 
 	@SerializedName("thumbs_down") 
-	public String thumbs_down; 
+	public int thumbs_down; 
 	@SerializedName("current_vote") 
 	public String current_vote;
 	public String getDefid() {
@@ -57,16 +57,16 @@ public class Result
 	public void setExample(String example) {
 		this.example = example;
 	}
-	public String getThumbs_up() {
+	public int getThumbs_up() {
 		return thumbs_up;
 	}
-	public void setThumbs_up(String thumbs_up) {
+	public void setThumbs_up(int thumbs_up) {
 		this.thumbs_up = thumbs_up;
 	}
-	public String getThumbs_down() {
+	public int getThumbs_down() {
 		return thumbs_down;
 	}
-	public void setThumbs_down(String thumbs_down) {
+	public void setThumbs_down(int thumbs_down) {
 		this.thumbs_down = thumbs_down;
 	}
 	public String getCurrent_vote() {
@@ -82,5 +82,13 @@ public class Result
 				+ definition + ", example=" + example + ", thumbs_up="
 				+ thumbs_up + ", thumbs_down=" + thumbs_down
 				+ ", current_vote=" + current_vote + "]";
+	}
+	
+	//The solution to the best choice of result is to see what has the highest ups when subtracting the number of downs. I have
+	//found a number of definitions with the highest number of thumbs up but they also have higher thumbs down than they do
+	//thumbs up!
+	public int compareTo(Result argResult) 
+	{
+		return (argResult.getThumbs_up() - argResult.getThumbs_down()) - (this.getThumbs_up() - this.getThumbs_down());
 	}
 }

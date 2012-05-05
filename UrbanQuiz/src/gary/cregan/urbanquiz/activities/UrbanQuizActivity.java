@@ -5,6 +5,8 @@ import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Color;
+import android.graphics.LightingColorFilter;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.Html;
@@ -101,6 +103,7 @@ public class UrbanQuizActivity extends Activity
 		this.myDbHelper = new DataBaseHelper(this);
 	    
 	    this.button1 = (Button)this.findViewById(R.id.button1);
+	    button1.getBackground().setColorFilter(new LightingColorFilter(Color.parseColor("#6495ED"), Color.parseColor("#708090")));
 	    this.button1.setOnClickListener(new OnClickListener() 
 	    {
 	          public void onClick(View v) 
@@ -109,6 +112,7 @@ public class UrbanQuizActivity extends Activity
 	          }
 	    });
 	    this.button2 = (Button)this.findViewById(R.id.button2);
+	    button2.getBackground().setColorFilter(new LightingColorFilter(Color.parseColor("#6495ED"), Color.parseColor("#708090")));
 	    this.button2.setOnClickListener(new OnClickListener() 
 	    {
 	          public void onClick(View v) 
@@ -117,6 +121,7 @@ public class UrbanQuizActivity extends Activity
 	          }
 	    });
 	    this.button3 = (Button)this.findViewById(R.id.button3);
+	    button3.getBackground().setColorFilter(new LightingColorFilter(Color.parseColor("#6495ED"), Color.parseColor("#708090")));
 	    this.button3.setOnClickListener(new OnClickListener() 
 	    {
 	          public void onClick(View v) 
@@ -125,6 +130,7 @@ public class UrbanQuizActivity extends Activity
 	          }
 	    });
 	    this.button4 = (Button)this.findViewById(R.id.button4);
+	    button4.getBackground().setColorFilter(new LightingColorFilter(Color.parseColor("#6495ED"), Color.parseColor("#708090")));
 	    this.button4.setOnClickListener(new OnClickListener() 
 	    {
 	          public void onClick(View v) 

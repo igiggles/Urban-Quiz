@@ -10,6 +10,12 @@
     <string name="answerImage">Answer</string>
     <string name="startQuiz">Start Quiz</string>
     <string name="credits">About</string>
-    
+     <string name="logo">UQ Logo</string>
+    <color name="blue">#1f8fff</color>
+    <color name="navy">#00218f</color>
+    <color name="paleblue">#BEE5FA</color>
+    <color name="red">#111111</color>
+    <color name="red2">#222222</color>
+    <color name="red3">#333333</color>
 
 </resources>

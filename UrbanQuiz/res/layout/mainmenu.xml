@@ -15,8 +15,11 @@
             android:id="@+id/imageView1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.36"
-            android:src="@drawable/wip" />
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:contentDescription="@+string/logo"
+            android:src="@drawable/uq3" />
+
     </LinearLayout>
 
     <Button

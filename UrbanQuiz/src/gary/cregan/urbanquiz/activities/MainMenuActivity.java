@@ -5,6 +5,8 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.LightingColorFilter;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -54,6 +56,7 @@ public class MainMenuActivity extends Activity
     	this.toast = Toast.makeText(this, "You need internet access to play.", 2000);
     	
         this.storyButton = (Button)this.findViewById(R.id.storyModeButton);
+        this.storyButton.getBackground().setColorFilter(new LightingColorFilter(Color.parseColor("#6495ED"), Color.parseColor("#708090")));
         this.storyButton.setOnClickListener(new OnClickListener() {
           public void onClick(View v) 
           {
@@ -70,6 +73,7 @@ public class MainMenuActivity extends Activity
           }
         });
         this.creditsButton = (Button)this.findViewById(R.id.creditsButton);
+        this.creditsButton.getBackground().setColorFilter(new LightingColorFilter(Color.parseColor("#6495ED"), Color.parseColor("#708090")));
         this.creditsButton.setOnClickListener(new OnClickListener() {
             public void onClick(View v) 
             {

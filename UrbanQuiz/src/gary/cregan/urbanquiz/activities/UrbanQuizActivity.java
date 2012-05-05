@@ -71,6 +71,7 @@ public class UrbanQuizActivity extends Activity
 		
 		progressDialog = new ProgressDialog(this); //taking object for progress dialog
     	progressDialog.setMessage("Loading...");
+    	progressDialog.setCancelable(false);
     	
     	AlertDialog.Builder builder;
 

@@ -362,10 +362,18 @@ public class UrbanQuizActivity extends Activity
 		
 		protected void onPostExecute(List<Result> result) 
 	    {
+			
 			Collections.sort(result);
-	    	Question question = new Question();
-	    	question.setDescription(result.get(0).getDefinition());
-	    	question.setRightAnswer(result.get(0).getWord().toLowerCase().trim());
+	    	
+			//answer is just the word without white space
+			String answerRegex = ".*?\\b" + result.get(0).getWord().trim() + "\\b.*?";
+			String answerNoRegex = result.get(0).getWord().trim();
+			
+			Question question = new Question();
+			//the right answer is to be lower case so that it is concealed with the alternative answers
+			question.setRightAnswer(answerNoRegex.toLowerCase());
+			//need to take the answer out of the definition if it exists. Replace with underscores.
+	    	question.setDescription(result.get(0).getDefinition().replaceAll(answerRegex.toUpperCase(), "_____").replaceAll(answerRegex.toLowerCase(), "_____").replaceAll(answerRegex, "_____"));
 	    	question.setAuthor(result.get(0).getAuthor());
 	    	question.setWordInUse(result.get(0).getExample());
 	    	

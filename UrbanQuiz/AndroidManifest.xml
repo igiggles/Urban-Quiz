@@ -12,7 +12,7 @@
     <uses-sdk android:minSdkVersion="7" />
 
     <application
-        android:icon="@drawable/uq"
+        android:icon="@drawable/uqlogo"
         android:label="@string/app_name" 
         android:theme="@style/app_theme">
         <activity
